@@ -215,6 +215,7 @@ public class GDPerformanceMonitor: NSObject {
         self.performanceView = GDPerformanceView.init()
         self.performanceView?.appVersionHidden = self.appVersionHidden
         self.performanceView?.deviceVersionHidden = self.deviceVersionHidden
+	self.performanceView?.postfixText = self.postfixText
         self.performanceView?.performanceDelegate = self.delegate
         self.checkAndApplyStatusBarAppearance(prefersStatusBarHidden: self.prefersStatusBarHidden, preferredStatusBarStyle: self.preferredStatusBarStyle)
         
