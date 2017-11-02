@@ -51,6 +51,15 @@ internal class GDPerformanceView: UIWindow {
     }
     
     /**
+     Change it to add a custom text at the end of debug info.
+     */
+    internal var postfixText: String = "" {
+		didSet {
+			self.configureVersionsString()
+		}
+	}
+    
+    /**
      Change it to hide or show device iOS version from monitoring view. Default is false.
      */
     internal var deviceVersionHidden: Bool = false {
@@ -372,6 +381,8 @@ internal class GDPerformanceView: UIWindow {
         } else {
             self.versionsString = ""
         }
+        
+        self.versionsString += self.postfixText
     }
     
 }
