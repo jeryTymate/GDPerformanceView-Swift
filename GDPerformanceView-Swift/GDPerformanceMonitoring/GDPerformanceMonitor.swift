@@ -57,7 +57,9 @@ public class GDPerformanceMonitor: NSObject {
 	Change it to add a custom text at the end of debug info.
 	*/
 	public var postfixText: String = "" {
-		self.performanceView.postfixText = self.postfixText
+	    didSet {
+		self.performanceView?.postfixText = self.postfixText
+       	    }
 	}
     
     /**
